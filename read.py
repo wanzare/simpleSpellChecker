@@ -1,6 +1,7 @@
 from nltk.tokenize import word_tokenize
 from nltk.metrics import edit_distance
 from collections import defaultdict
+import json
 
 def create_vocab(file):
     """
@@ -20,6 +21,27 @@ def create_vocab(file):
     text.close()
     return  clean_vocab
 
+def save_vocab(vocab,path):
+    """
+
+    :param vocab: vocabulary
+    :param path: path to save
+    :return:
+    """
+    with open(path, 'w') as outfile:
+        json.dump(vocab, outfile)
+
+
+def load_vocab(path):
+    """
+
+    :param path:path to json file
+    :return: vocabulary
+    """
+    with open(path) as f:
+        return json.load(f)
+
+    
 class Checker(object):
     """
     A spell checker - looks into the dictioary and retrieves all words that are only one eidt distance from the
