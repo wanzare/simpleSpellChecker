@@ -1,11 +1,9 @@
 import unittest
 import spellChecker.read as read
+
+
 class Test(unittest.TestCase):
-    from urllib import request
-    url = "http://www.gutenberg.org/files/2554/2554.txt"
-    response = request.urlopen(url)
-    raw = response.read().decode('utf8')
-    print(raw)
+    
     i2 = ["power", "trusted"]
     FILE = "test_corpus.txt"
     vocab = read.create_vocab(FILE)
@@ -20,6 +18,4 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
-
     unittest.main()
