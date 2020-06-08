@@ -1,6 +1,6 @@
-Spell cheker
+Spell checker
 =========
-A simple illustration of how a spell cheker works.     
+A simple illustration of how a spell checker works.     
 
 ## Requirements
 ```bash
